@@ -20,6 +20,7 @@
             padding: 10px 20px;
             text-align: center;
             backdrop-filter: blur(5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
         nav {
             margin: 10px 0;
@@ -28,6 +29,10 @@
             margin: 0 15px;
             text-decoration: none;
             color: #e6e1e6;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffd700; /* Золотистый цвет при наведении */
         }
         section {
             padding: 20px;
@@ -52,6 +57,7 @@
             margin: 10px;
             border-radius: 8px;
             border: 2px solid white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
         @keyframes snowfall {
             0% { transform: translateY(0); }
@@ -67,6 +73,11 @@
             border-radius: 50%;
             opacity: 0.8;
             animation: snowfall linear infinite;
+        }
+        .frosted {
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid #fff;
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
@@ -86,14 +97,14 @@
             <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
             <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
-            <img src="4617495761_0_1738278975319.png" alt="Скриншот 3">
+            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
         </div>
     </section>
-    <section id="stories">
+    <section id="stories" class="frosted">
         <h2>History</h2>
         <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
     </section>
-    <section id="contact">
+    <section id="contact" class="frosted">
         <h2>Contacts</h2>
         <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank">Telegram</a>.</p>
     </section>
