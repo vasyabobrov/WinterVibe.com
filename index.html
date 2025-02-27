@@ -4,34 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter Vibe Roblox</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Lora', serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            background-image: url('https://source.unsplash.com/1600x900/?snow,winter');
+            background-color: #001f33;
+            background-image: url('4617495761_0_1738275670957.png');
             background-size: cover;
             background-attachment: fixed;
-            overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+            color: #ffffff;
         }
         header {
-            background-color: rgba(61, 63, 61, 0.9);
-            color: white;
-            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
             text-align: center;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-bottom: 2px solid #ffd700; /* Золотистая граница */
-        }
-        .created-by {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
-            font-weight: bold;
-            z-index: 10; /* Убедитесь, что текст отображается поверх других элементов */
+            backdrop-filter: blur(10px);
         }
         nav {
             margin: 10px 0;
@@ -39,33 +28,27 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #e6e1e6;
+            color: #ffd700; /* Цвет для других ссылок */
             font-weight: bold;
         }
         nav a:hover {
-            color: #ffd700; /* Золотистый цвет при наведении */
+            color: #ffffff; /* Цвет при наведении */
         }
         section {
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.8);
-            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease; /* Плавный переход фона */
-            max-width: 800px; /* Ограничение ширины секции */
-        }
-        section:hover {
-            background: rgba(255, 255, 255, 0.9); /* Изменение фона при наведении */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: background 0.3s ease;
         }
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(61, 63, 61, 0.9);
-            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
             position: relative;
             bottom: 0;
             width: 100%;
-            backdrop-filter: blur(5px);
         }
         .gallery {
             display: flex;
@@ -77,16 +60,15 @@
             max-width: 300px;
             margin: 10px;
             border-radius: 8px;
-            border: 2px solid white;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease; /* Плавный переход при наведении */
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease;
             cursor: pointer;
         }
         .gallery img:hover {
-            transform: scale(1.05); /* Увеличение при наведении */
+            transform: scale(1.05);
         }
         .modal {
-            display: none; /* Скрыто по умолчанию */
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -94,7 +76,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
         }
         .modal-content {
             margin: auto;
@@ -109,13 +91,6 @@
             color: white;
             font-size: 40px;
             font-weight: bold;
-            transition: color 0.3s;
-        }
-        .close:hover,
-        .close:focus {
-            color: #ffd700; /* Золотистый цвет при наведении */
-            text-decoration: none;
-            cursor: pointer;
         }
         @keyframes snowfall {
             0% { transform: translateY(0); }
@@ -132,20 +107,10 @@
             opacity: 0.8;
             animation: snowfall linear infinite;
         }
-        .winter-decor {
-            position: relative;
-            margin: 20px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
     </style>
 </head>
 <body>
     <div id="snow-container"></div>
-    <div class="created-by">Created by: <strong>@gbc31054</strong></div>
     <header>
         <h1>Winter Vibe in Roblox</h1>
         <nav>
@@ -153,8 +118,8 @@
             <a href="#stories">History</a>
             <a href="#contact">Contacts</a>
         </nav>
+        <p>Created by: <strong>@gbc31054</strong></p>
     </header>
-    
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -164,22 +129,18 @@
             <img src="4617495761_0_1738278975319.png" alt="Скриншот 4" onclick="openModal(this.src)">
         </div>
     </section>
-    
-    <section id="stories" class="winter-decor">
+    <section id="stories">
         <h2>History</h2>
         <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
     </section>
-    
-    <section id="contact" class="winter-decor">
+    <section id="contact">
         <h2>Contacts</h2>
-        <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank">Telegram</a>.</p>
+        <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
     </section>
-    
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
     </footer>
 
-    <!-- Модальное окно -->
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -187,7 +148,7 @@
 
     <script>
         function createSnowflakes() {
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 50; i++) {
                 let snowflake = document.createElement('div');
                 snowflake.classList.add('snow');
                 snowflake.style.left = Math.random() * 100 + 'vw';
@@ -198,7 +159,6 @@
         }
         createSnowflakes();
 
-        // Функция открытия модального окна
         function openModal(src) {
             const modal = document.getElementById("myModal");
             const modalImg = document.getElementById("modalImage");
@@ -206,7 +166,6 @@
             modalImg.src = src;
         }
 
-        // Функция закрытия модального окна
         function closeModal() {
             const modal = document.getElementById("myModal");
             modal.style.display = "none";
