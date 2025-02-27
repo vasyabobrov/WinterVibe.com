@@ -14,6 +14,7 @@
             background-image: url('https://source.unsplash.com/1600x900/?snow,winter');
             background-size: cover;
             background-attachment: fixed;
+            overflow-x: hidden; /* Запретить горизонтальную прокрутку */
         }
         header {
             background-color: rgba(61, 63, 61, 0.9);
@@ -23,6 +24,14 @@
             backdrop-filter: blur(5px);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-bottom: 2px solid #ffd700; /* Золотистая граница */
+        }
+        .created-by {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-weight: bold;
+            z-index: 10; /* Убедитесь, что текст отображается поверх других элементов */
         }
         nav {
             margin: 10px 0;
@@ -37,12 +46,13 @@
             color: #ffd700; /* Золотистый цвет при наведении */
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
             background: rgba(255, 255, 255, 0.8);
-            margin: 20px;
+            margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease; /* Плавный переход фона */
+            max-width: 800px; /* Ограничение ширины секции */
         }
         section:hover {
             background: rgba(255, 255, 255, 0.9); /* Изменение фона при наведении */
@@ -135,6 +145,7 @@
 </head>
 <body>
     <div id="snow-container"></div>
+    <div class="created-by">Created by: <strong>@gbc31054</strong></div>
     <header>
         <h1>Winter Vibe in Roblox</h1>
         <nav>
@@ -143,6 +154,7 @@
             <a href="#contact">Contacts</a>
         </nav>
     </header>
+    
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -152,18 +164,17 @@
             <img src="4617495761_0_1738278975319.png" alt="Скриншот 4" onclick="openModal(this.src)">
         </div>
     </section>
+    
     <section id="stories" class="winter-decor">
         <h2>History</h2>
         <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
     </section>
+    
     <section id="contact" class="winter-decor">
         <h2>Contacts</h2>
         <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank">Telegram</a>.</p>
     </section>
-    <section>
-        <h2>Created by</h2>
-        <p>Roblox Username: <strong>@gbc31054</strong></p>
-    </section>
+    
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
     </footer>
@@ -176,7 +187,7 @@
 
     <script>
         function createSnowflakes() {
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) {
                 let snowflake = document.createElement('div');
                 snowflake.classList.add('snow');
                 snowflake.style.left = Math.random() * 100 + 'vw';
