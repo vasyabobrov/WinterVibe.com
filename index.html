@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter Vibe Roblox</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #001f33;
@@ -17,7 +17,7 @@
             color: #ffffff;
         }
         header {
-            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(10px);
@@ -29,8 +29,7 @@
             margin: 0 15px;
             text-decoration: none;
             color: #ffd700;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: bold;
         }
         nav a:hover {
             color: #ffffff;
@@ -40,14 +39,12 @@
             background: rgba(255, 255, 255, 0.1);
             margin: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
         footer {
             text-align: center;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
         .gallery {
@@ -60,57 +57,16 @@
             max-width: 300px;
             margin: 10px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
         .gallery img:hover {
             transform: scale(1.05);
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-        }
-        @keyframes snowfall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
-        }
-        .snow {
-            position: fixed;
-            top: 0;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: snowfall linear infinite;
-        }
     </style>
 </head>
 <body>
-    <div id="snow-container"></div>
     <header>
         <h1>Winter Vibe in Roblox</h1>
         <nav>
@@ -123,10 +79,10 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
-            <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1" onclick="openModal(this.src)">
-            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2" onclick="openModal(this.src)">
-            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3" onclick="openModal(this.src)">
-            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4" onclick="openModal(this.src)">
+            <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
+            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
+            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
+            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
         </div>
     </section>
     <section id="stories">
@@ -136,40 +92,10 @@
     <section id="contact">
         <h2>Contacts</h2>
         <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
+        <p><strong>Project:</strong> <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank" style="color: white;">Roblox Map</a></p>
     </section>
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
     </footer>
-
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script>
-        function createSnowflakes() {
-            for (let i = 0; i < 50; i++) {
-                let snowflake = document.createElement('div');
-                snowflake.classList.add('snow');
-                snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                snowflake.style.animationDelay = Math.random() * 5 + 's';
-                document.getElementById('snow-container').appendChild(snowflake);
-            }
-        }
-        createSnowflakes();
-
-        function openModal(src) {
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("modalImage");
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-    </script>
 </body>
 </html>
