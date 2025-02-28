@@ -21,7 +21,6 @@
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(10px);
-            position: relative;
         }
         nav a {
             margin: 0 15px;
@@ -52,17 +51,6 @@
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
         }
-        .lang-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px;
-            background: #ffd700;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -74,7 +62,6 @@
             <a href="#stories" id="nav-history">History</a>
             <a href="#contact" id="nav-contacts">Contacts</a>
         </nav>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇷🇺</button>
     </header>
 
     <section id="gallery">
@@ -100,16 +87,6 @@
     <footer>
         <p id="footer-text">© 2025 Roblox. Все права защищены.</p>
     </footer>
-
-    <script>
-        function toggleLanguage() {
-            const langButton = document.querySelector(".lang-toggle");
-            const languages = ["🇷🇺", "🇬🇧", "🇺🇦"];
-            let currentLangIndex = languages.indexOf(langButton.textContent);
-            currentLangIndex = (currentLangIndex + 1) % languages.length;
-            langButton.textContent = languages[currentLangIndex];
-        }
-    </script>
 </body>
 </html>
 
