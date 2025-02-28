@@ -24,6 +24,7 @@
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(10px);
+            border-bottom: 3px solid #ffd700;
         }
         nav {
             margin: 10px 0;
@@ -39,14 +40,15 @@
             color: #ffffff;
         }
         section {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            margin: 20px auto;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            transition: background 0.3s ease, transform 0.5s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            max-width: 800px;
             opacity: 0;
             transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
         section.visible {
             opacity: 1;
@@ -59,6 +61,7 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            border-top: 3px solid #ffd700;
         }
         .gallery {
             display: flex;
@@ -70,30 +73,23 @@
             max-width: 300px;
             margin: 10px;
             border-radius: 8px;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
         .gallery img:hover {
             transform: scale(1.05);
         }
-        .project {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-        }
         .project a {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 25px;
             background-color: #ffd700;
             color: #001f33;
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
         .project a:hover {
             background-color: #ffffff;
@@ -104,15 +100,15 @@
     <header>
         <h1>Winter Vibe in Roblox</h1>
         <nav>
-            <a href="#gallery">Photo</a> |
-            <a href="#project">Project</a>
-            <a href="#stories">History</a>
-            <a href="#contact">Contacts</a>
+            <a href="#gallery">Фото</a>
+            <a href="#project">Проект</a>
+            <a href="#stories">История</a>
+            <a href="#contact">Контакты</a>
         </nav>
-        <p>Created by: <strong>@gbc31054</strong></p>
+        <p>Создано: <strong>@gbc31054</strong></p>
     </header>
     <section id="gallery">
-        <h2>Gallery</h2>
+        <h2>Галерея</h2>
         <div class="gallery">
             <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
@@ -121,17 +117,17 @@
         </div>
     </section>
     <section id="project" class="project">
-        <h2>Project</h2>
-        <p>Visit our Roblox project and experience Winter Vibe firsthand!</p>
-        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Go to Project</a>
+        <h2>Проект</h2>
+        <p>Посетите наш проект в Roblox и испытайте Winter Vibe на себе!</p>
+        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Перейти к проекту</a>
     </section>
     <section id="stories">
-        <h2>History</h2>
-        <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
+        <h2>История</h2>
+        <p>Здесь вы можете рассказать о своих приключениях в Winter Vibe. Делитесь интересными моментами и событиями!</p>
     </section>
     <section id="contact">
-        <h2>Contacts</h2>
-        <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
+        <h2>Контакты</h2>
+        <p>Вся информация и дата выхода карты будут здесь <a href="https://t.me/WinterVibe101" target="_blank" style="color: #ffd700;">Telegram</a>.</p>
     </section>
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
@@ -153,5 +149,4 @@
     </script>
 </body>
 </html>
-
 
