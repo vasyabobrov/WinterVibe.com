@@ -14,6 +14,9 @@
             margin: 0;
             padding: 0;
             background-color: #001f33;
+            background-image: url('4617495761_0_1738275670957.png');
+            background-size: cover;
+            background-attachment: fixed;
             color: #ffffff;
         }
         header {
@@ -21,6 +24,9 @@
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(10px);
+        }
+        nav {
+            margin: 10px 0;
         }
         nav a {
             margin: 0 15px;
@@ -50,43 +56,101 @@
             text-align: center;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .project {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .project a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #001f33;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .project a:hover {
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 id="title">Winter Vibe in Roblox</h1>
+        <h1>Winter Vibe in Roblox</h1>
         <nav>
-            <a href="#gallery" id="nav-photo">Photo</a> |
-            <a href="#project" id="nav-project">Project</a>
-            <a href="#stories" id="nav-history">History</a>
-            <a href="#contact" id="nav-contacts">Contacts</a>
+            <a href="#gallery">Photo</a> |
+            <a href="#project">Project</a>
+            <a href="#stories">History</a>
+            <a href="#contact">Contacts</a>
         </nav>
+        <p>Created by: <strong>@gbc31054</strong></p>
     </header>
-
     <section id="gallery">
-        <h2 id="gallery-title">Gallery</h2>
-        <p id="gallery-text">Здесь будет ваша галерея</p>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
+            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
+            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
+            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
+        </div>
     </section>
-
-    <section id="project">
-        <h2 id="project-title">Project</h2>
-        <p id="project-text">Посетите наш проект в Roblox!</p>
+    <section id="project" class="project">
+        <h2>Project</h2>
+        <p>Visit our Roblox project and experience Winter Vibe firsthand!</p>
+        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Go to Project</a>
     </section>
-
     <section id="stories">
-        <h2 id="history-title">History</h2>
-        <p id="history-text">Истории игроков.</p>
+        <h2>History</h2>
+        <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
     </section>
-
     <section id="contact">
-        <h2 id="contacts-title">Contacts</h2>
-        <p id="contacts-text">Все новости и релизы тут <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
+        <h2>Contacts</h2>
+        <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
     </section>
-
     <footer>
-        <p id="footer-text">© 2025 Roblox. Все права защищены.</p>
+        <p>© 2025 Roblox. Все права защищены.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
 
