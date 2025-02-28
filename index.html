@@ -6,22 +6,6 @@
     <title>Winter Vibe Roblox</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #001f33;
-            --text-color: #ffffff;
-            --section-bg: rgba(255, 255, 255, 0.1);
-            --highlight-bg: yellow;
-            --highlight-text: black;
-        }
-        
-        [data-theme="light"] {
-            --bg-color: #f5f5f5;
-            --text-color: #000000;
-            --section-bg: rgba(0, 0, 0, 0.1);
-            --highlight-bg: orange;
-            --highlight-text: white;
-        }
-        
         html {
             scroll-behavior: smooth;
         }
@@ -29,8 +13,8 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: #001f33;
+            color: #ffffff;
         }
         header {
             background-color: rgba(0, 0, 0, 0.7);
@@ -47,11 +31,11 @@
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: var(--text-color);
+            color: #ffffff;
         }
         section {
             padding: 20px;
-            background: var(--section-bg);
+            background: rgba(255, 255, 255, 0.1);
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -68,21 +52,16 @@
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
         }
-        .theme-toggle, .lang-toggle {
+        .lang-toggle {
             position: absolute;
             top: 20px;
+            right: 20px;
             padding: 10px;
             background: #ffd700;
             border: none;
             cursor: pointer;
             border-radius: 5px;
             font-weight: bold;
-        }
-        .theme-toggle {
-            right: 20px;
-        }
-        .lang-toggle {
-            right: 80px;
         }
     </style>
 </head>
@@ -95,7 +74,6 @@
             <a href="#stories" id="nav-history">History</a>
             <a href="#contact" id="nav-contacts">Contacts</a>
         </nav>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         <button class="lang-toggle" onclick="toggleLanguage()">🇷🇺</button>
     </header>
 
@@ -124,17 +102,6 @@
     </footer>
 
     <script>
-        function toggleTheme() {
-            const body = document.body;
-            if (body.getAttribute("data-theme") === "light") {
-                body.setAttribute("data-theme", "dark");
-                document.querySelector(".theme-toggle").textContent = "🌙";
-            } else {
-                body.setAttribute("data-theme", "light");
-                document.querySelector(".theme-toggle").textContent = "☀️";
-            }
-        }
-
         function toggleLanguage() {
             const langButton = document.querySelector(".lang-toggle");
             const languages = ["🇷🇺", "🇬🇧", "🇺🇦"];
