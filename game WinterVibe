@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Exploration Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: url('https://source.unsplash.com/1600x900/?snow,landscape') no-repeat center center/cover;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const player = {
+            x: canvas.width / 2,
+            y: canvas.height / 2,
+            radius: 20,
+            color: "blue",
+            speed: 5,
+            dx: 0,
+            dy: 0
+        };
+        
+        function drawPlayer() {
+            ctx.beginPath();
+            ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+            ctx.fillStyle = player.color;
+            ctx.fill();
+            ctx.closePath();
+        }
+        
+        function update() {
+            player.x += player.dx;
+            player.y += player.dy;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            requestAnimationFrame(update);
+        }
+        
+        function movePlayer(e) {
+            const speed = player.speed;
+            if (e.key === "ArrowRight") player.dx = speed;
+            if (e.key === "ArrowLeft") player.dx = -speed;
+            if (e.key === "ArrowUp") player.dy = -speed;
+            if (e.key === "ArrowDown") player.dy = speed;
+        }
+        
+        function stopPlayer(e) {
+            if (["ArrowRight", "ArrowLeft"].includes(e.key)) player.dx = 0;
+            if (["ArrowUp", "ArrowDown"].includes(e.key)) player.dy = 0;
+        }
+        
+        window.addEventListener("keydown", movePlayer);
+        window.addEventListener("keyup", stopPlayer);
+        update();
+    </script>
+</body>
+</html>
