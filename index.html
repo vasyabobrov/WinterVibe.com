@@ -49,31 +49,8 @@
             backdrop-filter: blur(10px);
             position: relative;
         }
-        nav {
-            margin: 10px 0;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #ffd700;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
         .hamburger {
-            display: none;
+            display: flex;
             flex-direction: column;
             cursor: pointer;
             position: absolute;
@@ -86,6 +63,32 @@
             background-color: #ffd700;
             margin: 3px 0;
             transition: 0.4s;
+        }
+        nav {
+            display: none; /* Скрыть меню по умолчанию */
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 5px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffd700;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffffff;
         }
         section {
             padding: 20px;
@@ -117,36 +120,6 @@
         }
         .gallery img:hover {
             transform: scale(1.05);
-        }
-        .candle {
-            width: 20px;
-            height: 50px;
-            background: #ffeb3b;
-            border-radius: 5px;
-            position: absolute;
-            top: 10px;
-            right: 50px;
-            animation: flicker 1s infinite alternate;
-        }
-        .candle::after {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: #ff5722;
-            border-radius: 50%;
-            position: absolute;
-            top: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: flame 1s infinite alternate;
-        }
-        @keyframes flicker {
-            0% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-        @keyframes flame {
-            0% { transform: translateX(-50%) scale(1); }
-            100% { transform: translateX(-50%) scale(1.5); }
         }
         footer {
             text-align: center;
@@ -182,7 +155,12 @@
                 snowContainer.appendChild(snowflake);
             }
         }
-        
+
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'none' || nav.style.display === '' ? 'block' : 'none';
+        }
+
         window.onload = () => {
             createSnowflakes();
         };
@@ -192,6 +170,11 @@
     <div class="snow"></div>
     <header>
         <h1>Зимняя Атмосфера в Roblox</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <nav>
             <ul>
                 <li><a href="#gallery">Галерея</a></li>
@@ -200,12 +183,6 @@
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="candle"></div>
     </header>
     <section id="gallery">
         <h2>Галерея</h2>
