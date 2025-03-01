@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
             background-color: #001f33;
-            background-image: url('4617495761_0_1738275670957.png');
+            background-image: url('https://source.unsplash.com/1600x900/?snow,landscape');
             background-size: cover;
             background-attachment: fixed;
             color: #ffffff;
@@ -52,6 +52,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
         footer {
             text-align: center;
             padding: 10px;
@@ -73,6 +90,15 @@
         </nav>
         <p>Создано: <strong>@gbc31054</strong></p>
     </header>
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="4617495761_0_1738278980362.png" alt="Скриншот 1">
+            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
+            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
+            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
+        </div>
+    </section>
     <section id="stories">
         <h2>История</h2>
         <p>Здесь вы можете рассказать о своих приключениях в Зимней Атмосфере. Делитесь интересными моментами и событиями!</p>
