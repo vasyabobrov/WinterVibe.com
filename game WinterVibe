@@ -3,80 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Зимняя Игра Исследования</title>
+    <title>Зимняя Атмосфера Roblox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            overflow: hidden;
-            background: url('https://source.unsplash.com/1600x900/?snow,landscape') no-repeat center center/cover;
+            padding: 0;
+            background-color: #001f33;
+            background-image: url('4617495761_0_1738275670957.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ffffff;
         }
-        canvas {
-            display: block;
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
         }
-        #history {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffd700;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        section {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: background 0.3s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            text-align: center;
             padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .project {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .project a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: #001f33;
+            font-weight: bold;
+            text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .project a:hover {
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <div id="history">
+    <header>
+        <h1>Зимняя Атмосфера в Roblox</h1>
+        <nav>
+            <a href="#gallery">Галерея</a> |
+            <a href="#project">Проект</a>
+            <a href="#stories">История</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <p>Создано: <strong>@gbc31054</strong></p>
+    </header>
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery">
+            <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
+            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
+            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
+            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
+        </div>
+    </section>
+    <section id="project" class="project">
+        <h2>Проект</h2>
+        <p>Посетите наш проект в Roblox и получите возможность ощутить зимнюю атмосферу на себе!</p>
+        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Перейти к проекту</a>
+    </section>
+    <section id="stories">
         <h2>История</h2>
-        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101">@WinterVibe101</a></p>
-    </div>
-    <canvas id="gameCanvas"></canvas>
+        <p>Здесь вы можете рассказать о своих приключениях в Зимней Атмосфере. Делитесь интересными моментами и событиями!</p>
+        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">@WinterVibe101</a></p>
+    </section>
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Вся информация и дата выхода карты будут здесь <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
+    </section>
+    <footer>
+        <p>© 2025 Roblox. Все права защищены.</p>
+    </footer>
     <script>
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        
-        const player = {
-            x: canvas.width / 2,
-            y: canvas.height / 2,
-            radius: 20,
-            color: "blue",
-            speed: 5,
-            dx: 0,
-            dy: 0
-        };
-        
-        function drawPlayer() {
-            ctx.beginPath();
-            ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
-            ctx.fillStyle = player.color;
-            ctx.fill();
-            ctx.closePath();
-        }
-        
-        function update() {
-            player.x += player.dx;
-            player.y += player.dy;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            drawPlayer();
-            requestAnimationFrame(update);
-        }
-        
-        function movePlayer(e) {
-            const speed = player.speed;
-            if (e.key === "ArrowRight") player.dx = speed;
-            if (e.key === "ArrowLeft") player.dx = -speed;
-            if (e.key === "ArrowUp") player.dy = -speed;
-            if (e.key === "ArrowDown") player.dy = speed;
-        }
-        
-        function stopPlayer(e) {
-            if (["ArrowRight", "ArrowLeft"].includes(e.key)) player.dx = 0;
-            if (["ArrowUp", "ArrowDown"].includes(e.key)) player.dy = 0;
-        }
-        
-        window.addEventListener("keydown", movePlayer);
-        window.addEventListener("keyup", stopPlayer);
-        update();
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.3 });
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
 </body>
 </html>
