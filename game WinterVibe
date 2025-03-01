@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winter Exploration Game</title>
+    <title>Зимняя Игра Исследования</title>
     <style>
         body {
             margin: 0;
@@ -13,9 +13,21 @@
         canvas {
             display: block;
         }
+        #history {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
+    <div id="history">
+        <h2>История</h2>
+        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101">@WinterVibe101</a></p>
+    </div>
     <canvas id="gameCanvas"></canvas>
     <script>
         const canvas = document.getElementById("gameCanvas");
