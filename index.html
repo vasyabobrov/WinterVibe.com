@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Создайте свою зимнюю атмосферу в Roblox. Делитесь моментами и наслаждайтесь зимой!">
+    <meta name="keywords" content="Roblox, зимняя атмосфера, галерея, приключения">
     <title>Зимняя Атмосфера Roblox</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -24,12 +26,23 @@
             padding: 20px;
             text-align: center;
             backdrop-filter: blur(10px);
+            position: relative;
         }
         nav {
             margin: 10px 0;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
         }
         nav a {
-            margin: 0 15px;
             text-decoration: none;
             color: #ffd700;
             font-weight: bold;
@@ -78,30 +91,51 @@
             width: 100%;
         }
     </style>
+    <script>
+        document.addEventListener("scroll", function() {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <h1>Зимняя Атмосфера в Roblox</h1>
         <nav>
-            <a href="#gallery">Галерея</a> |
-            <a href="#project">Проект</a>
-            <a href="#stories">История</a>
-            <a href="#contact">Контакты</a>
+            <ul>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#project">Проект</a></li>
+                <li><a href="#stories">История</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
         </nav>
-        <p>Создано: <strong>@gbc31054</strong></p>
     </header>
     <section id="gallery">
         <h2>Галерея</h2>
         <div class="gallery">
+            <img src="4617495761_0_1738278980362.png" alt="Скриншот 1">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
             <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
             <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
         </div>
     </section>
+    <section id="project">
+        <h2>Проект</h2>
+        <p>Здесь вы можете описать ваш проект, его цели и особенности. Расскажите, что делает его уникальным.</p>
+    </section>
     <section id="stories">
         <h2>История</h2>
         <p>Здесь вы можете рассказать о своих приключениях в Зимней Атмосфере. Делитесь интересными моментами и событиями!</p>
         <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">@WinterVibe101</a></p>
+    </section>
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Если у вас есть вопросы, вы можете связаться со мной по электронной почте: <a href="mailto:example@example.com" style="color: white;">example@example.com</a></p>
     </section>
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
