@@ -8,9 +8,6 @@
     <title>Зимняя Атмосфера Roblox</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            overflow: hidden;
-        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -66,13 +63,6 @@
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            transition: background 0.3s ease, transform 0.5s ease;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
         .gallery {
             display: flex;
@@ -101,16 +91,6 @@
         }
     </style>
     <script>
-        document.addEventListener("scroll", function() {
-            const sections = document.querySelectorAll("section");
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    section.classList.add("visible");
-                }
-            });
-        });
-
         // Snowfall effect
         function createSnowflakes() {
             const snowContainer = document.querySelector('.snow');
