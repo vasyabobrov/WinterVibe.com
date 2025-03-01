@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Зимняя Атмосфера Roblox</title>
+    <title>Winter Vibe Roblox</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         html {
@@ -102,17 +102,17 @@
 </head>
 <body>
     <header>
-        <h1>Зимняя Атмосфера в Roblox</h1>
+        <h1>Winter Vibe in Roblox</h1>
         <nav>
-            <a href="#gallery">Галерея</a> |
-            <a href="#project">Проект</a>
-            <a href="#stories">История</a>
-            <a href="#contact">Контакты</a>
+            <a href="#gallery">Photo</a> |
+            <a href="#project">Project</a>
+            <a href="#stories">History</a>
+            <a href="#contact">Contacts</a>
         </nav>
-        <p>Создано: <strong>@gbc31054</strong></p>
+        <p>Created by: <strong>@gbc31054</strong></p>
     </header>
     <section id="gallery">
-        <h2>Галерея</h2>
+        <h2>Gallery</h2>
         <div class="gallery">
             <img src="4617495761_0_1738278980362 (1).png" alt="Скриншот 1">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
@@ -121,18 +121,17 @@
         </div>
     </section>
     <section id="project" class="project">
-        <h2>Проект</h2>
-        <p>Посетите наш проект в Roblox и получите возможность ощутить зимнюю атмосферу на себе!</p>
-        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Перейти к проекту</a>
+        <h2>Project</h2>
+        <p>Visit our Roblox project and experience Winter Vibe firsthand!</p>
+        <a href="https://www.roblox.com/share?code=565ecbaf80899743b40c138e1d354184&type=ExperienceDetails&stamp=1740692804279" target="_blank">Go to Project</a>
     </section>
     <section id="stories">
-        <h2>История</h2>
-        <p>Здесь вы можете рассказать о своих приключениях в Зимней Атмосфере. Делитесь интересными моментами и событиями!</p>
-        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">@WinterVibe101</a></p>
+        <h2>History</h2>
+        <p>Here you can tell about your adventures in Winter Vibe. Share interesting moments and events!</p>
     </section>
     <section id="contact">
-        <h2>Контакты</h2>
-        <p>Вся информация и дата выхода карты будут здесь <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
+        <h2>Contacts</h2>
+        <p>All information and the release date of the map will be here <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">Telegram</a>.</p>
     </section>
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
