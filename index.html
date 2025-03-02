@@ -20,6 +20,18 @@
             background-size: cover;
             background-attachment: fixed;
             color: #ffffff;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Легкое затемнение фона */
+            backdrop-filter: blur(3px); /* Легкое размытие */
+            z-index: -1;
         }
         .snow {
             position: fixed;
@@ -140,24 +152,5 @@
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
     </footer>
-    <script>
-        function createSnowflakes() {
-            const snowContainer = document.querySelector('.snow');
-            for (let i = 0; i < 100; i++) {
-                let snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                let size = Math.random() * 5 + 2;
-                let duration = Math.random() * 5 + 5;
-                let left = Math.random() * 100;
-                snowflake.style.width = size + 'px';
-                snowflake.style.height = size + 'px';
-                snowflake.style.left = left + 'vw';
-                snowflake.style.animationDuration = duration + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-        createSnowflakes();
-    </script>
 </body>
 </html>
-
