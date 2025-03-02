@@ -16,7 +16,7 @@
             margin: 0;
             padding: 0;
             background-color: #001f33;
-            background-image: "4617495761_0_1738281078144.png";
+            background-image: url("4617495761_0_1738281078144.png");
             background-size: cover;
             background-attachment: fixed;
             color: #ffffff;
@@ -99,26 +99,6 @@
             text-decoration: underline;
         }
     </style>
-    <script>
-        // Snowfall effect
-        function createSnowflakes() {
-            const snowContainer = document.querySelector('.snow');
-            for (let i = 0; i < 100; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.classList.add('snowflake');
-                snowflake.style.width = Math.random() * 5 + 'px';
-                snowflake.style.height = snowflake.style.width;
-                snowflake.style.left = Math.random() * 100 + 'vw';
-                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
-                snowflake.style.animationDelay = Math.random() * 5 + 's';
-                snowContainer.appendChild(snowflake);
-            }
-        }
-
-        window.onload = () => {
-            createSnowflakes();
-        };
-    </script>
 </head>
 <body>
     <div class="snow"></div>
