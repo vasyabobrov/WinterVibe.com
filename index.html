@@ -29,8 +29,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Легкое затемнение фона */
-            backdrop-filter: blur(3px); /* Легкое размытие */
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
             z-index: -1;
         }
         .snow {
@@ -61,10 +61,12 @@
             backdrop-filter: blur(10px);
         }
         nav {
-            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         nav a {
-            margin: 0 15px;
             text-decoration: none;
             color: #ffd700;
             font-weight: bold;
@@ -76,7 +78,8 @@
         section {
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
-            margin: 20px;
+            margin: 20px auto;
+            max-width: 90%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
@@ -84,15 +87,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 10px;
         }
         .gallery img {
             width: 100%;
             max-width: 300px;
-            margin: 10px;
             border-radius: 8px;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
             transition: transform 0.3s ease;
-            cursor: pointer;
         }
         .gallery img:hover {
             transform: scale(1.05);
@@ -102,7 +104,6 @@
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
             position: relative;
-            bottom: 0;
             width: 100%;
         }
         .email {
@@ -110,6 +111,15 @@
             margin: 5px 0;
             color: white;
             text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .gallery img {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
@@ -130,29 +140,4 @@
         <div class="gallery">
             <img src="4617495761_0_1738278980362.png" alt="Скриншот 1">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
-            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
-            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
-        </div>
-    </section>
-    <section id="project">
-        <h2>Проект</h2>
-        <p>Данный проект в разработке.</p>
-    </section>
-    <section id="stories">
-        <h2>История</h2>
-        <p>Здесь вы можете рассказать о своих приключениях в Зимнем Вайбе. Делитесь интересными моментами и событиями!</p>
-        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">@WinterVibe101</a></p>
-    </section>
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Если у вас есть вопросы или предложения, вы можете связаться со мной по электронной почте:</p>
-        <span class="email"><a href="mailto:wintervibe16@gmail.com" style="color: white;">wintervibe16@gmail.com</a></span>
-        <span class="email"><a href="mailto:vasyabobrov1@icloud.com" style="color: white;">vasyabobrov1@icloud.com</a></span>
-        <p>Или напишите мне в Telegram: <a href="https://t.me/pvpraptorrr" style="color: white;">@pvpraptorrr</a></p>
-    </section>
-    <footer>
-        <p>© 2025 Roblox. Все права защищены.</p>
-    </footer>
-</body>
-</html>
-
+            <img src="
