@@ -6,8 +6,13 @@
     <meta name="description" content="Создайте свой зимний вайб в Roblox. Делитесь моментами и наслаждайтесь зимой!">
     <meta name="keywords" content="Roblox, зимний вайб, галерея, приключения">
     <title>Зимний Вайб Roblox</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Шрифт -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -34,32 +39,17 @@
             backdrop-filter: blur(3px);
             z-index: -1;
         }
-        .snow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            from { transform: translateY(-10px); }
-            to { transform: translateY(100vh); }
-        }
+
+        /* Приветствие */
         header {
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 10px; /* Уменьшил отступы */
             text-align: center;
             backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 24px; /* Сделал шрифт немного меньше */
+            margin-bottom: 5px;
         }
         nav {
             display: flex;
@@ -76,14 +66,18 @@
         nav a:hover {
             color: #ffffff;
         }
+
+        /* Секции */
         section {
-            padding: 20px;
+            padding: 15px; /* Уменьшил отступы */
             background: rgba(255, 255, 255, 0.1);
-            margin: 20px auto;
+            margin: 15px auto;
             max-width: 90%;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
+
+        /* Галерея */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -100,6 +94,8 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
+
+        /* Футер */
         footer {
             text-align: center;
             padding: 10px;
@@ -107,30 +103,31 @@
             position: relative;
             width: 100%;
         }
+
+        /* Контакты */
         .email {
             display: block;
             margin: 5px 0;
             color: white;
             text-decoration: underline;
         }
-        .parallax {
-            height: 500px; /* Высота секции */
-            background-attachment: fixed; /* Эффект параллакса */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+
+        /* Значок Telegram */
+        .telegram-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: url("telegram-icon.png") no-repeat center/cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        .parallax-content {
-            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-            padding: 20px;
-            border-radius: 10px;
+        .telegram-icon:hover {
+            transform: scale(1.1);
         }
+
+        /* Медиа-запросы для адаптации */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -139,11 +136,16 @@
             .gallery img {
                 max-width: 90%;
             }
+            .telegram-icon {
+                width: 40px;
+                height: 40px;
+                bottom: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="snow"></div>
     <header>
         <h1>Зимний Вайб в Roblox</h1>
         <nav>
@@ -155,13 +157,6 @@
         <p>Создано: <strong>@gbc31054</strong></p>
     </header>
 
-    <section class="parallax" style="background-image: url('https://example.com/your-parallax-image.jpg');">
-        <div class="parallax-content">
-            <h2>Добро пожаловать в Зимний Вайб</h2>
-            <p>Здесь начинается ваше зимнее приключение в Roblox!</p>
-        </div>
-    </section>
-
     <section id="gallery">
         <h2>Галерея</h2>
         <div class="gallery">
@@ -172,18 +167,18 @@
         </div>
     </section>
 
-    <section id="project" data-aos="fade-up">
+    <section id="project">
         <h2>Проект</h2>
         <p>Данный проект в разработке.</p>
     </section>
 
-    <section id="stories" data-aos="fade-up">
+    <section id="stories">
         <h2>История</h2>
         <p>Здесь вы можете рассказать о своих приключениях в Зимнем Вайбе. Делитесь интересными моментами и событиями!</p>
         <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: white;">@WinterVibe101</a></p>
     </section>
 
-    <section id="contact" data-aos="fade-up">
+    <section id="contact">
         <h2>Контакты</h2>
         <p>Если у вас есть вопросы или предложения, вы можете связаться со мной по электронной почте:</p>
         <span class="email"><a href="mailto:wintervibe16@gmail.com" style="color: white;">wintervibe16@gmail.com</a></span>
@@ -193,14 +188,9 @@
 
     <footer>
         <p>© 2025 Roblox. Все права защищены.</p>
-        <a href="https://t.me/WinterVibe101" target="_blank" style="position: fixed; bottom: 20px; right: 20px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 50px; height: 50px;">
-        </a>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <!-- Значок Telegram -->
+    <a href="https://t.me/WinterVibe101" target="_blank" class="telegram-icon"></a>
 </body>
 </html>
