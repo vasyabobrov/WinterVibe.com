@@ -11,18 +11,18 @@
     <link rel="icon" type="image/png" href="wintervibe.png">
 
     <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('winter_background.jpg') no-repeat center center fixed; /* Замените на ваше изображение фона */
-            background-size: cover;
+            background: linear-gradient(to bottom, #001f33, #003366);
+            background-attachment: fixed;
             color: #ffffff;
             position: relative;
         }
@@ -33,63 +33,56 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
             z-index: -1;
         }
 
         /* Приветствие */
         header {
             background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
+            padding: 20px;
             text-align: center;
-            border-bottom: 3px solid #f39c12;
+            border-bottom: 3px solid gold;
             backdrop-filter: blur(15px);
         }
         h1 {
-            font-size: 36px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: bold;
             text-transform: uppercase;
-            color: #f39c12;
+            color: gold;
         }
         nav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
         }
         nav a {
             text-decoration: none;
-            color: #f39c12;
-            font-weight: 600;
-            font-size: 20px;
-            padding: 10px 15px;
-            border: 2px solid transparent;
-            border-radius: 5px;
+            color: gold;
+            font-weight: bold;
+            font-size: 18px;
             transition: all 0.3s ease;
         }
         nav a:hover {
             color: white;
-            border: 2px solid #f39c12;
-            background-color: rgba(243, 156, 18, 0.2);
-            text-shadow: 0px 0px 10px #f39c12;
+            text-shadow: 0px 0px 10px gold;
         }
 
         /* Секции */
         section {
-            padding: 30px;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             margin: 20px auto;
-            max-width: 90%;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(243, 156, 18, 0.7);
-            backdrop-filter: blur(15px);
+            max-width: 85%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            backdrop-filter: blur(10px);
         }
         h2 {
             text-align: center;
-            color: #f39c12;
-            font-size: 28px;
-            font-weight: 600;
+            color: gold;
         }
 
         /* Галерея */
@@ -97,26 +90,26 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
         .gallery img {
             width: 100%;
             max-width: 300px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(243, 156, 18, 0.7);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .gallery img:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 30px rgba(243, 156, 18, 1);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 1);
         }
 
         /* Футер */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background: rgba(0, 0, 0, 0.8);
-            border-top: 3px solid #f39c12;
+            border-top: 3px solid gold;
         }
 
         /* Эффект при прокрутке */
@@ -128,7 +121,7 @@
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb {
-            background: #f39c12;
+            background: gold;
             border-radius: 10px;
         }
         ::-webkit-scrollbar-thumb:hover {
@@ -167,15 +160,15 @@
     <section id="stories">
         <h2>История</h2>
         <p>Делитесь своими лучшими моментами зимнего вайба!</p>
-        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: #f39c12;">@WinterVibe101</a></p>
+        <p>Присоединяйтесь к нашему каналу в Telegram: <a href="https://t.me/WinterVibe101" target="_blank" style="color: gold;">@WinterVibe101</a></p>
     </section>
 
     <section id="contact">
         <h2>Контакты</h2>
         <p>Свяжитесь со мной по электронной почте:</p>
-        <p><a href="mailto:wintervibe16@gmail.com" style="color: #f39c12;">wintervibe16@gmail.com</a></p>
-        <p><a href="mailto:vasyabobrov1@icloud.com" style="color: #f39c12;">vasyabobrov1@icloud.com</a></p>
-        <p>Или напишите в Telegram: <a href="https://t.me/pvpraptorrr" style="color: #f39c12;">@pvpraptorrr</a></p>
+        <p><a href="mailto:wintervibe16@gmail.com" style="color: gold;">wintervibe16@gmail.com</a></p>
+        <p><a href="mailto:vasyabobrov1@icloud.com" style="color: gold;">vasyabobrov1@icloud.com</a></p>
+        <p>Или напишите в Telegram: <a href="https://t.me/pvpraptorrr" style="color: gold;">@pvpraptorrr</a></p>
     </section>
 
     <footer>
