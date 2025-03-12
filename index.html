@@ -31,29 +31,31 @@
             position: sticky;
             top: 0;
             background: rgba(0, 0, 0, 0.8);
-            padding: 20px 0;
+            padding: 10px 0; /* Уменьшено */
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
         }
         
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem; /* Уменьшено */
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px; /* Уменьшено */
             color: #00ccff;
             margin: 0;
+            text-align: center;
+            line-height: 1.2; /* Добавлен межстрочный интервал */
         }
 
         .logo {
-            max-width: 150px;
+            max-width: 120px; /* Уменьшено */
             margin: 10px 0;
         }
         
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px; /* Уменьшено */
             margin-top: 10px;
         }
         nav a {
@@ -61,13 +63,14 @@
             color: #00ccff;
             font-weight: 600;
             transition: color 0.4s;
+            font-size: 1.1rem; /* Увеличен размер шрифта */
         }
         nav a:hover {
             color: #ffffff;
         }
 
         section {
-            padding: 80px 20px;
+            padding: 60px 20px; /* Уменьшено */
             background: rgba(255, 255, 255, 0.1);
             margin: 40px auto;
             max-width: 1200px;
@@ -80,6 +83,14 @@
             text-align: center;
             color: #00ccff;
             margin-bottom: 20px;
+            text-shadow: none; /* Убрано текстовое затенение */
+        }
+
+        p {
+            font-size: 1.2rem; /* Увеличен размер шрифта для абзацев */
+            line-height: 1.6; /* Добавлен межстрочный интервал для удобства чтения */
+            text-align: justify; /* Выравнивание по ширине */
+            margin: 0 0 20px; /* Добавлены отступы */
         }
 
         .gallery {
@@ -153,7 +164,7 @@
 
     <section id="stories">
         <h2>Истории игроков</h2>
-        <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашей растущей сообщества.</p>
+        <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашего растущего сообщества.</p>
     </section>
 
     <section id="contact">
