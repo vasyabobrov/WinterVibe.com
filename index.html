@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" href="wintervibe.png">
 
     <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         html {
@@ -23,8 +23,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
-            background-size: cover;
+            background: linear-gradient(to bottom, #003366, #001122);
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -33,40 +32,38 @@
             position: sticky;
             top: 0;
             background: rgba(0, 0, 0, 0.8);
-            padding: 10px; /* Уменьшение отступов для мобильных устройств */
+            padding: 20px 0;
             display: flex;
             align-items: center;
             z-index: 1000;
-            flex-wrap: nowrap; /* Изменено на nowrap, чтобы предотвратить перенос */
         }
 
         .logo {
-            max-width: 120px; /* Уменьшение размера логотипа */
-            margin-right: 20px; /* Отступ справа для логотипа */
+            max-width: 150px;
+            margin: 10px 20px; /* Отступ для логотипа */
         }
         
         h1 {
             font-family: 'Roboto', sans-serif;
-            font-size: 1.5rem; /* Уменьшение размера шрифта заголовка */
+            font-size: 3rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #00ccff;
             margin: 0;
             flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
-            text-align: center; /* Центрирование заголовка на мобильных */
+            text-align: center; /* Центрирование заголовка */
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Уменьшение промежутка между пунктами меню */
+            gap: 30px;
             margin-left: auto;
         }
         nav a {
             text-decoration: none;
             color: #00ccff;
             font-weight: 600;
-            font-size: 0.9rem;
             transition: color 0.4s;
         }
         nav a:hover {
@@ -74,7 +71,7 @@
         }
 
         section {
-            padding: 60px 20px; /* Уменьшение отступов для мобильных */
+            padding: 80px 20px;
             background: rgba(255, 255, 255, 0.1);
             margin: 40px auto;
             max-width: 1200px;
@@ -83,7 +80,7 @@
         }
         
         h2 {
-            font-size: 2rem; /* Уменьшение размера шрифта для заголовков секций */
+            font-size: 2.5rem;
             text-align: center;
             color: #00ccff;
             margin-bottom: 20px;
@@ -96,8 +93,7 @@
             gap: 20px;
         }
         .gallery img {
-            max-width: 100%; /* Установка максимальной ширины для изображений */
-            height: auto; /* Автоматическое соотношение сторон */
+            max-width: 300px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
             transition: transform 0.4s ease;
@@ -130,8 +126,22 @@
 
         /* Мобильные стили */
         @media (max-width: 768px) {
+            body {
+                background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
+                background-size: cover; /* Установка фонового изображения */
+            }
+
+            header {
+                padding: 10px; /* Уменьшение отступов для мобильных устройств */
+            }
+
+            .logo {
+                max-width: 120px; /* Уменьшение размера логотипа */
+            }
+
             h1 {
-                font-size: 1.2rem; /* Уменьшение размера шрифта заголовка для мобильных */
+                font-size: 1.5rem; /* Уменьшение размера шрифта заголовка */
+                text-align: center; /* Центрирование заголовка на мобильных */
             }
 
             nav {
