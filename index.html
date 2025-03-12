@@ -10,94 +10,112 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="wintervibe.png">
 
-    <!-- Шрифт -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #001f33;
-            background-image: url("4617495761_0_1738281078144.png");
-            background-size: cover;
-            background-attachment: fixed;
+            background: linear-gradient(to bottom, #003366, #001122);
             color: #ffffff;
-            position: relative;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: -1;
-        }
-
+        
         header {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.8);
+            border-bottom: 3px solid #00aaff;
         }
+        
         h1 {
-            font-size: 36px;
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #00ccff;
         }
+        
         nav {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             gap: 20px;
+            flex-wrap: wrap;
         }
         nav a {
             text-decoration: none;
-            color: #ffd700;
+            color: #00ccff;
             font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: all 0.4s ease-in-out;
+            background: rgba(0, 170, 255, 0.4);
+            border: 2px solid transparent;
+        }
+        nav a:hover {
+            background: rgba(0, 170, 255, 0.6);
+            border: 2px solid #00ccff;
+            border-radius: 12px;
         }
 
         section {
-            padding: 30px;
-            margin: 20px auto;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 30px auto;
             max-width: 80%;
-            border-radius: 15px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         }
+        
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            color: #00ccff;
+        }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
         .gallery img {
-            width: 100%;
             max-width: 300px;
             border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 1);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            position: relative;
-            width: 100%;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 3px solid #00ccff;
         }
 
         .telegram-icon {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: url("https://img.icons8.com/3d-fluency/512/telegram.png") no-repeat center/cover;
             cursor: pointer;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        .telegram-icon:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 1);
         }
 
         @media (max-width: 768px) {
@@ -109,8 +127,8 @@
                 max-width: 90%;
             }
             .telegram-icon {
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
                 bottom: 10px;
                 right: 10px;
             }
@@ -145,16 +163,17 @@
 
     <section id="stories">
         <h2>История</h2>
-        <p>Делитесь моментами и событиями в нашем сообществе.</p>
+        <p>Делитесь приключениями в зимнем вайбе!</p>
     </section>
 
     <section id="contact">
         <h2>Контакты</h2>
-        <p>Email: <a href="mailto:wintervibe16@gmail.com" style="color: #ffd700;">wintervibe16@gmail.com</a></p>
+        <p>Email: <a href="mailto:wintervibe16@gmail.com" style="color: #00ccff;">wintervibe16@gmail.com</a></p>
+        <p>Telegram: <a href="https://t.me/pvpraptorrr" style="color: #00ccff;">@pvpraptorrr</a></p>
     </section>
 
     <footer>
-        <p>© 2025 Roblox. Все права защищены.</p>
+        <p>© 2025 Winter Vibe. Все права защищены.</p>
     </footer>
 
     <a href="https://t.me/WinterVibe101" target="_blank" class="telegram-icon"></a>
