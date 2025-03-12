@@ -12,7 +12,6 @@
 
     <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet"> <!-- Новый шрифт -->
 
     <style>
         html {
@@ -23,88 +22,66 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #003366, #001122);
+            background: url('4617495761_0_1738278980362.png') no-repeat center center fixed; /* Установка изображения фона */
+            background-size: cover; /* Изображение фона будет покрывать весь экран */
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-        
+
         header {
-            position: fixed; /* Фиксированный заголовок */
+            position: sticky;
             top: 0;
-            width: 100%; /* Задает ширину на 100% */
             background: rgba(0, 0, 0, 0.8);
-            padding: 10px 20px; /* Добавлен отступ */
-            display: flex; /* Flexbox для размещения логотипа и названия */
-            align-items: center; /* Центрирование по вертикали */
+            padding: 20px 0;
+            text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
         }
         
-        .logo {
-            max-width: 120px;
-            margin-right: 20px; /* Отступ между логотипом и названием */
-            border-radius: 15%;
-            object-fit: cover;
-        }
-
         h1 {
-            font-family: 'Raleway', sans-serif; /* Измененный шрифт */
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             color: #00ccff;
             margin: 0;
-            line-height: 1.2;
         }
 
+        .logo {
+            max-width: 150px;
+            margin: 10px 0;
+        }
+        
         nav {
             display: flex;
-            justify-content: flex-end; /* Перемещение навигации вправо */
-            gap: 15px; /* Уменьшен отступ между элементами навигации */
-            margin-left: auto; /* Позволяет навигации занимать свободное пространство */
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
         }
         nav a {
             text-decoration: none;
             color: #00ccff;
             font-weight: 600;
+            font-size: 0.9rem; /* Уменьшенный размер шрифта для мобильных */
             transition: color 0.4s;
-            font-size: 1rem; /* Уменьшен размер шрифта для навигации */
         }
         nav a:hover {
             color: #ffffff;
         }
 
         section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             background: rgba(255, 255, 255, 0.1);
-            margin: 100px auto; /* Увеличен верхний отступ для видимости под фиксированным заголовком */
+            margin: 40px auto;
             max-width: 1200px;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            position: relative;
         }
-
-        .section-header {
-            position: sticky;
-            top: 0;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
-            z-index: 10;
-        }
-
+        
         h2 {
             font-size: 2.5rem;
             text-align: center;
             color: #00ccff;
             margin-bottom: 20px;
-            text-shadow: none;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            text-align: justify;
-            margin: 0 0 20px;
         }
 
         .gallery {
@@ -159,9 +136,7 @@
     </header>
 
     <section id="gallery">
-        <div class="section-header">
-            <h2>Галерея</h2>
-        </div>
+        <h2>Галерея</h2>
         <p>Добро пожаловать в нашу галерею! Здесь собраны лучшие моменты зимнего вайба в Roblox.</p>
         <div class="gallery">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 1">
@@ -174,23 +149,17 @@
     </section>
 
     <section id="project">
-        <div class="section-header">
-            <h2>О проекте</h2>
-        </div>
+        <h2>О проекте</h2>
         <p>Winter Vibe — это мир, наполненный атмосферой зимних праздников, снежных приключений и теплых воспоминаний. Мы постоянно развиваем наш проект, добавляя новые возможности для игроков.</p>
     </section>
 
     <section id="stories">
-        <div class="section-header">
-            <h2>Истории игроков</h2>
-        </div>
-        <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашего растущего сообщества.</p>
+        <h2>Истории игроков</h2>
+        <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашей растущей сообщества.</p>
     </section>
 
     <section id="contact">
-        <div class="section-header">
-            <h2>Контакты</h2>
-        </div>
+        <h2>Контакты</h2>
         <p>Свяжитесь с нами по любым вопросам или предложениям:</p>
         <p>Email: <a href="mailto:wintervibe16@gmail.com">wintervibe16@gmail.com</a></p>
         <p>Email: <a href="mailto:vasyabobrov1@icloud.com">vasyabobrov1@icloud.com</a></p>
