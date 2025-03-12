@@ -23,8 +23,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('4617495761_0_1738278980362.png') no-repeat center center fixed; /* Установка изображения фона */
-            background-size: cover; /* Изображение фона будет покрывать весь экран */
+            background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
+            background-size: cover;
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -33,37 +33,40 @@
             position: sticky;
             top: 0;
             background: rgba(0, 0, 0, 0.8);
-            padding: 20px 0;
-            display: flex; /* Используем flexbox для выравнивания */
-            align-items: center; /* Центрируем элементы по вертикали */
+            padding: 10px; /* Уменьшение отступов для мобильных устройств */
+            display: flex;
+            align-items: center;
             z-index: 1000;
+            flex-wrap: nowrap; /* Изменено на nowrap, чтобы предотвратить перенос */
         }
 
         .logo {
-            max-width: 150px;
-            margin: 0 20px; /* Добавляем отступы */
+            max-width: 120px; /* Уменьшение размера логотипа */
+            margin-right: 20px; /* Отступ справа для логотипа */
         }
         
         h1 {
-            font-family: 'Roboto', sans-serif; /* Изменение шрифта названия */
-            font-size: 2.5rem; /* Уменьшаем размер шрифта */
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem; /* Уменьшение размера шрифта заголовка */
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #00ccff;
             margin: 0;
+            flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
+            text-align: center; /* Центрирование заголовка на мобильных */
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-left: auto; /* Сдвигаем навигацию вправо */
+            gap: 15px; /* Уменьшение промежутка между пунктами меню */
+            margin-left: auto;
         }
         nav a {
             text-decoration: none;
             color: #00ccff;
             font-weight: 600;
-            font-size: 0.9rem; /* Уменьшенный размер шрифта для мобильных */
+            font-size: 0.9rem;
             transition: color 0.4s;
         }
         nav a:hover {
@@ -71,7 +74,7 @@
         }
 
         section {
-            padding: 80px 20px;
+            padding: 60px 20px; /* Уменьшение отступов для мобильных */
             background: rgba(255, 255, 255, 0.1);
             margin: 40px auto;
             max-width: 1200px;
@@ -80,7 +83,7 @@
         }
         
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem; /* Уменьшение размера шрифта для заголовков секций */
             text-align: center;
             color: #00ccff;
             margin-bottom: 20px;
@@ -93,7 +96,8 @@
             gap: 20px;
         }
         .gallery img {
-            max-width: 300px;
+            max-width: 100%; /* Установка максимальной ширины для изображений */
+            height: auto; /* Автоматическое соотношение сторон */
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
             transition: transform 0.4s ease;
@@ -122,6 +126,30 @@
         }
         .telegram-icon:hover {
             transform: scale(1.2);
+        }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.2rem; /* Уменьшение размера шрифта заголовка для мобильных */
+            }
+
+            nav {
+                flex-direction: column; /* Вертикальное расположение пунктов меню */
+                align-items: center; /* Центрирование пунктов меню */
+            }
+
+            nav a {
+                font-size: 1rem; /* Увеличение размера шрифта для удобочитаемости */
+            }
+
+            section {
+                padding: 40px 10px; /* Уменьшение отступов для мобильных */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Уменьшение размера шрифта заголовков секций */
+            }
         }
     </style>
 </head>
