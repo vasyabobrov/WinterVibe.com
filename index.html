@@ -44,6 +44,11 @@
             color: #00ccff;
             margin: 0;
         }
+
+        .logo {
+            max-width: 150px;
+            margin: 10px 0;
+        }
         
         nav {
             display: flex;
@@ -103,7 +108,7 @@
         .telegram-icon {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 20px; /* Изменено на right для перемещения значка вправо */
             width: 60px;
             height: 60px;
             background: url("https://img.icons8.com/3d-fluency/512/telegram.png") no-repeat center/cover;
@@ -114,32 +119,11 @@
         .telegram-icon:hover {
             transform: scale(1.2);
         }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .gallery img {
-                max-width: 90%;
-            }
-            .telegram-icon {
-                width: 50px;
-                height: 50px;
-                bottom: 10px;
-                right: 10px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
+        <img src="wintervibe_logo.png" alt="Логотип Winter Vibe" class="logo">
         <h1>Winter Vibe in Roblox</h1>
         <nav>
             <a href="#gallery">Галерея</a>
@@ -151,28 +135,32 @@
 
     <section id="gallery">
         <h2>Галерея</h2>
+        <p>Добро пожаловать в нашу галерею! Здесь собраны лучшие моменты зимнего вайба в Roblox.</p>
         <div class="gallery">
-            <img src="4617495761_0_1738278980362.png" alt="Скриншот 1">
-            <img src="4617495761_0_1738275602916.png" alt="Скриншот 2">
-            <img src="4617495761_0_1738275646617.png" alt="Скриншот 3">
-            <img src="4617495761_0_1738278975319.png" alt="Скриншот 4">
+            <img src="image1.png" alt="Скриншот 1">
+            <img src="image2.png" alt="Скриншот 2">
+            <img src="image3.png" alt="Скриншот 3">
+            <img src="image4.png" alt="Скриншот 4">
         </div>
     </section>
 
     <section id="project">
-        <h2>Проект</h2>
-        <p>Данный проект в разработке.</p>
+        <h2>О проекте</h2>
+        <p>Winter Vibe — это мир, наполненный атмосферой зимних праздников, снежных приключений и теплых воспоминаний. Мы постоянно развиваем наш проект, добавляя новые возможности для игроков.</p>
     </section>
 
     <section id="stories">
-        <h2>История</h2>
-        <p>Делитесь приключениями в зимнем вайбе!</p>
+        <h2>Истории игроков</h2>
+        <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашей растущей сообщества.</p>
     </section>
 
     <section id="contact">
         <h2>Контакты</h2>
-        <p>Email: <a href="mailto:wintervibe16@gmail.com" style="color: #00ccff;">wintervibe16@gmail.com</a></p>
-        <p>Telegram: <a href="https://t.me/pvpraptorrr" style="color: #00ccff;">@pvpraptorrr</a></p>
+        <p>Свяжитесь с нами по любым вопросам или предложениям:</p>
+        <p>Email: <a href="mailto:wintervibe16@gmail.com">wintervibe16@gmail.com</a></p>
+        <p>Email: <a href="mailto:vasyabobrov1@icloud.com">vasyabobrov1@icloud.com</a></p>
+        <p>Telegram: <a href="https://t.me/pvpraptorrr">@pvpraptorrr</a></p>
+        <p>Группа Telegram: <a href="https://t.me/WinterVibe101">@WinterVibe101</a></p>
     </section>
 
     <footer>
