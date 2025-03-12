@@ -50,6 +50,8 @@
         .logo {
             max-width: 120px; /* Уменьшено */
             margin: 10px 0;
+            border-radius: 15%; /* Добавлено закругление углов */
+            object-fit: cover; /* Обеспечивает сохранение пропорций изображения */
         }
         
         nav {
@@ -76,8 +78,17 @@
             max-width: 1200px;
             border-radius: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative; /* Добавлено для позиционирования заголовка */
         }
-        
+
+        .section-header {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для заголовка */
+            padding: 10px 0;
+            z-index: 10; /* Убедитесь, что заголовок выше других элементов */
+        }
+
         h2 {
             font-size: 2.5rem;
             text-align: center;
@@ -145,7 +156,9 @@
     </header>
 
     <section id="gallery">
-        <h2>Галерея</h2>
+        <div class="section-header">
+            <h2>Галерея</h2>
+        </div>
         <p>Добро пожаловать в нашу галерею! Здесь собраны лучшие моменты зимнего вайба в Roblox.</p>
         <div class="gallery">
             <img src="4617495761_0_1738275602916.png" alt="Скриншот 1">
@@ -158,17 +171,23 @@
     </section>
 
     <section id="project">
-        <h2>О проекте</h2>
+        <div class="section-header">
+            <h2>О проекте</h2>
+        </div>
         <p>Winter Vibe — это мир, наполненный атмосферой зимних праздников, снежных приключений и теплых воспоминаний. Мы постоянно развиваем наш проект, добавляя новые возможности для игроков.</p>
     </section>
 
     <section id="stories">
-        <h2>Истории игроков</h2>
+        <div class="section-header">
+            <h2>Истории игроков</h2>
+        </div>
         <p>Наши игроки создают незабываемые моменты в Winter Vibe! Делитесь своими историями и впечатлениями, чтобы стать частью нашего растущего сообщества.</p>
     </section>
 
     <section id="contact">
-        <h2>Контакты</h2>
+        <div class="section-header">
+            <h2>Контакты</h2>
+        </div>
         <p>Свяжитесь с нами по любым вопросам или предложениям:</p>
         <p>Email: <a href="mailto:wintervibe16@gmail.com">wintervibe16@gmail.com</a></p>
         <p>Email: <a href="mailto:vasyabobrov1@icloud.com">vasyabobrov1@icloud.com</a></p>
@@ -183,3 +202,4 @@
     <a href="https://t.me/WinterVibe101" target="_blank" class="telegram-icon"></a>
 </body>
 </html>
+
