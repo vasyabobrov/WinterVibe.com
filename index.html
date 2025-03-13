@@ -126,13 +126,14 @@
 
         /* Мобильные стили */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Вертикальное расположение логотипа и заголовка */
+                align-items: center; /* Центрирование содержимого в заголовке */
+            }
+
             body {
                 background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
                 background-size: cover; /* Установка фонового изображения */
-            }
-
-            header {
-                padding: 10px; /* Уменьшение отступов для мобильных устройств */
             }
 
             .logo {
