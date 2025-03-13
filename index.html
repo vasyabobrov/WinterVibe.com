@@ -33,11 +33,12 @@
             top: 0;
             background: rgba(0, 0, 0, 0.8);
             padding: 20px 0;
-            text-align: center;
+            text-align: left; /* Изменено на left для выравнивания текста влево */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             display: flex; /* Используем флекс для выравнивания */
             align-items: center; /* Вертикальное выравнивание */
+            justify-content: space-between; /* Распределение пространства между элементами */
         }
 
         .logo {
@@ -51,8 +52,8 @@
             letter-spacing: 2px;
             color: #00ccff;
             margin: 0;
-            flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
             text-align: center; /* Центрирование заголовка */
+            flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
         }
 
         nav {
