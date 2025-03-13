@@ -12,7 +12,6 @@
 
     <!-- Шрифты -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         html {
@@ -23,7 +22,8 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #003366, #001122);
+            background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
+            background-size: cover; /* Установка фонового изображения */
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -33,18 +33,19 @@
             top: 0;
             background: rgba(0, 0, 0, 0.8);
             padding: 20px 0;
-            display: flex;
-            align-items: center;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
+            display: flex; /* Используем флекс для выравнивания */
+            align-items: center; /* Вертикальное выравнивание */
         }
 
         .logo {
             max-width: 150px;
-            margin: 10px 20px; /* Отступ для логотипа */
+            margin: 10px; /* Убрал правый и левый отступы */
         }
         
         h1 {
-            font-family: 'Roboto', sans-serif;
             font-size: 3rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -129,11 +130,6 @@
             header {
                 flex-direction: column; /* Вертикальное расположение логотипа и заголовка */
                 align-items: center; /* Центрирование содержимого в заголовке */
-            }
-
-            body {
-                background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
-                background-size: cover; /* Установка фонового изображения */
             }
 
             .logo {
