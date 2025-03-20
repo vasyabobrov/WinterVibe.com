@@ -23,7 +23,7 @@
             margin: 0;
             padding: 0;
             background: url('4617495761_0_1738278980362.png') no-repeat center center fixed;
-            background-size: cover; /* Установка фонового изображения */
+            background-size: cover;
             color: #ffffff;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
@@ -33,32 +33,54 @@
             top: 0;
             background: rgba(0, 0, 0, 0.8);
             padding: 20px 0;
-            display: flex; /* Используем флекс для выравнивания */
-            align-items: center; /* Вертикальное выравнивание */
-            justify-content: space-between; /* Распределение пространства между элементами */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             z-index: 1000;
+            width: 100%;
         }
 
         .logo {
             max-width: 150px;
-            margin-left: 20px; /* Отступ слева для логотипа */
+            margin-left: 20px;
+            transition: transform 0.2s ease-in-out;
         }
-        
+        .logo:hover {
+            animation: jump 0.6s ease, vibrate 0.2s infinite ease-in-out alternate;
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes vibrate {
+            0% { transform: translateX(-1px); }
+            100% { transform: translateX(1px); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
         h1 {
-            font-size: 2.5rem; /* Уменьшение размера заголовка */
+            font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #00ccff;
             margin: 0;
-            text-align: center; /* Центрирование заголовка */
-            flex-grow: 1; /* Позволяет заголовку занимать доступное пространство */
+            text-align: center;
+            flex-grow: 1;
+            animation: fadeIn 1s ease forwards; /* Анимация появления */
         }
 
         nav {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-right: 20px; /* Отступ справа для навигации */
+            margin-right: 20px;
         }
         nav a {
             text-decoration: none;
@@ -123,40 +145,6 @@
         .telegram-icon:hover {
             transform: scale(1.2);
         }
-
-        /* Мобильные стили */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; /* Вертикальное расположение логотипа и заголовка */
-                align-items: center; /* Центрирование содержимого в заголовке */
-            }
-
-            .logo {
-                max-width: 120px; /* Уменьшение размера логотипа */
-            }
-
-            h1 {
-                font-size: 1.5rem; /* Уменьшение размера шрифта заголовка */
-                text-align: center; /* Центрирование заголовка на мобильных */
-            }
-
-            nav {
-                flex-direction: column; /* Вертикальное расположение пунктов меню */
-                align-items: center; /* Центрирование пунктов меню */
-            }
-
-            nav a {
-                font-size: 1rem; /* Увеличение размера шрифта для удобочитаемости */
-            }
-
-            section {
-                padding: 40px 10px; /* Уменьшение отступов для мобильных */
-            }
-
-            h2 {
-                font-size: 1.5rem; /* Уменьшение размера шрифта заголовков секций */
-            }
-        }
     </style>
 </head>
 <body>
@@ -194,19 +182,17 @@
         <p>Делитесь своими историями и впечатлениями, чтобы стать частью нашей растущей сообщества.</p>
     </section>
 
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Свяжитесь с нами по любым вопросам или предложениям:</p>
-        <p>Email: <a href="mailto:wintervibe16@gmail.com">wintervibe16@gmail.com</a></p>
-        <p>Email: <a href="mailto:vasyabobrov1@icloud.com">vasyabobrov1@icloud.com</a></p>
-        <p>Privat telegram: <a href="https://t.me/pvpraptorrr">@pvpraptorrr</a></p>
-        <p>Group Telegram: <a href="https://t.me/WinterVibe101">@WinterVibe101</a></p>
-    </section>
-
     <footer>
         <p>© 2025 Winter Vibe. Все права защищены.</p>
     </footer>
 
     <a href="https://t.me/WinterVibe101" target="_blank" class="telegram-icon"></a>
+
+    <script>
+        window.onload = function() {
+            const title = document.querySelector('h1');
+            title.classList.add('fadeIn');
+        };
+    </script>
 </body>
 </html>
